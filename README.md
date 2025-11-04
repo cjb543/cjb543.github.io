@@ -1,4 +1,3 @@
 # Portfolio Website
-Demonstrating my  design and technical prowess through my portfolio site: \
-
+My portfolio site, demonstrating my top-tier design intuition and technical prowess. \
 <a href="https://christopher-benson.com>christopher-benson.com</a>
