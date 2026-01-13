@@ -52,9 +52,12 @@ dt {
   margin-top: 10px;
 }
 
+a.tag{
+  font-size: 0.3em;
+}
+
 footer {
   margin-top: 40px;
   font-size: 0.9em;
   color: #666;
 }
-
