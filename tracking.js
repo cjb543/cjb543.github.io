@@ -1,8 +1,8 @@
 const CONFIG = {
   chesscom: "cjb543",
   github: "cjb543",
-  lat: 41.9931,
-  lon: -88.6862,
+  lat: 41.8827,
+  lon: -87.6233,
 };
 
 function setLi(label, value) {
