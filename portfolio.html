@@ -3,163 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✏️</text></svg>"
-    />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✏️</text></svg>" />
+    <style>body{font:1em/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#222;max-width:42rem;margin:4rem auto;padding:0 1.25rem;background:#f5f5f5;-webkit-font-smoothing:antialiased}h1,h2,h3{font:400 1em/1.25 Georgia,serif;color:#000;margin:1.6rem 0 .6rem}h1{font-size:3rem;letter-spacing:-.02em}h2{font-size:2rem;text-align:center}h3{font-size:1.2rem}p{margin:1rem 0}a{color:inherit;text-decoration:none;border-bottom:1px solid #ccc;transition:.2s}a:hover{color:#000;border-color:#000}hr{border:0;border-top:2px solid #000;width:50%;margin:2.5rem 0}blockquote{margin:1.5rem 0;padding-left:1rem;border-left:2px solid #000;color:#555;font-style:italic}small{color:#777;font-size:.85em}html{overflow-y:scroll}main{display:flex;flex-direction:column;min-height:calc(100vh - 8rem)}nav{display:flex;border:1px solid #ddd;margin:2rem 0}nav a{padding:8px 16px;border-bottom:none;text-align:center;flex:1}nav a:hover{background:#f0f0f0;border-bottom:none}nav a.active{background:#e8e8e8}.proj-row{display:flex;gap:1rem;padding:16px 0;border-bottom:1px solid #ddd;align-items:baseline}.proj-year{width:4rem;color:#777;font-size:.85em;flex-shrink:0}.proj-info{flex:1}.proj-title{font-size:1.1em}.proj-desc{color:#777;font-size:.85em;margin:4px 0 0}.proj-tech{color:#777;font-size:.85em;text-align:right;flex-shrink:0;white-space:nowrap}.site-header{text-align:center;padding:64px 0 0}.site-subtitle{font-family:Georgia,serif;letter-spacing:.12em;font-size:.85em;color:#555}.site-footer{margin-top:auto;padding:1.5rem 0;border-top:1px solid #ddd;text-align:center;font-size:.85em;color:#777}</style>
     <title>Christopher Benson</title>
   </head>
   <body>
-    <main id="main">
-      <header class="w3-panel w3-center" style="padding: 64px 16px">
+    <main>
+      <header class="site-header">
         <h1>Chris Benson</h1>
-        <h1 class="w3-xlarge">SOFTWARE ENGINEER</h1>
-        <div class="w3-padding-32">
-          <div class="w3-bar w3-border">
-            <a href="/index.html" class="w3-bar-item w3-button">About</a>
-            <a
-              href="/portfolio.html"
-              class="w3-bar-item w3-button w3-light-grey"
-              >Portfolio</a
-            >
-            <a href="/writings.html" class="w3-bar-item w3-button">Writings</a>
-            <a href="/uses.html" class="w3-bar-item w3-button w3-hide-small"
-              >Uses</a
-            >
-          </div>
-        </div>
+        <p class="site-subtitle">SOFTWARE ENGINEER</p>
+        <nav>
+          <a href="/index.html">About</a>
+          <a href="/portfolio.html" class="active">Portfolio</a>
+          <a href="/uses.html">Uses</a>
+        </nav>
       </header>
-
-      <section aria-labelledby="portfolio-heading">
-        <h2 class="w3-center">Portfolio</h2>
+      <section>
+        <h2>Portfolio</h2>
         <p>
           Below is a list of my current programming projects. Some for
           school, some for hobby. I keep my professional work private.
         </p>
-      </section><br/>
-
+      </section>
       <section>
-        <div class="w3-row w3-padding-16 w3-border-bottom">
-          <div class="w3-col m2">
-            <span class="w3-small w3-text-grey">2026</span>
+        <div class="proj-row">
+          <span class="proj-year">2026</span>
+          <div class="proj-info">
+            <a href="#" class="proj-title">NCC</a>
+            <p class="proj-desc">Abstract language compiler</p>
           </div>
-          <div class="w3-col m7">
-            <a href="#" class="w3-large">NCC</a>
-            <p class="w3-small w3-text-grey" style="margin: 4px 0 0 0">
-              Abstract language compiler
-            </p>
-          </div>
-          <div class="w3-col m3 w3-right-align">
-            <span class="w3-small w3-text-grey">C, &nbsp; x86</span>
-          </div>
+          <span class="proj-tech">C, x86</span>
         </div>
-
-        <div class="w3-row w3-padding-16 w3-border-bottom">
-          <div class="w3-col m2">
-            <span class="w3-small w3-text-grey">2026</span>
+        <div class="proj-row">
+          <span class="proj-year">2026</span>
+          <div class="proj-info">
+            <a href="#" class="proj-title">zGrade</a>
+            <p class="proj-desc">Automatic HLASM assignment grading</p>
           </div>
-          <div class="w3-col m7">
-            <a href="#" class="w3-large">zGrade</a>
-            <p class="w3-small w3-text-grey" style="margin: 4px 0 0 0">
-              Automatic HLASM assignment grading
-            </p>
-          </div>
-          <div class="w3-col m3 w3-right-align">
-            <span class="w3-small w3-text-grey">C, &nbsp; Tooling</span>
-          </div>
+          <span class="proj-tech">C, Tooling</span>
         </div>
-
-        <div class="w3-row w3-padding-16 w3-border-bottom">
-          <div class="w3-col m2">
-            <span class="w3-small w3-text-grey">2026</span>
+        <div class="proj-row">
+          <span class="proj-year">2026</span>
+          <div class="proj-info">
+            <a href="#" class="proj-title">PyTractor</a>
+            <p class="proj-desc">Tractor dashboard emulator</p>
           </div>
-          <div class="w3-col m7">
-            <a href="#" class="w3-large">PyTractor</a>
-            <p class="w3-small w3-text-grey" style="margin: 4px 0 0 0">
-              Tractor dashboard emulator
-            </p>
-          </div>
-          <div class="w3-col m3 w3-right-align">
-            <span class="w3-small w3-text-grey">Python, &nbsp; Data</span>
-          </div>
+          <span class="proj-tech">Python, Data</span>
         </div>
-
-        <div class="w3-row w3-padding-16 w3-border-bottom">
-          <div class="w3-col m2">
-            <span class="w3-small w3-text-grey">2025</span>
+        <div class="proj-row">
+          <span class="proj-year">2025</span>
+          <div class="proj-info">
+            <a href="#" class="proj-title">ReadMetric</a>
+            <p class="proj-desc">Correlative study between README and project quality</p>
           </div>
-          <div class="w3-col m7">
-            <a href="#" class="w3-large">ReadMetric</a>
-            <p class="w3-small w3-text-grey" style="margin: 4px 0 0 0">
-              Correlative study between README and project quality
-            </p>
-          </div>
-          <div class="w3-col m3 w3-right-align">
-            <span class="w3-small w3-text-grey">Python, &nbsp; Research</span>
-          </div>
+          <span class="proj-tech">Python, Research</span>
         </div>
-
-        <div class="w3-row w3-padding-16 w3-border-bottom">
-          <div class="w3-col m2">
-            <span class="w3-small w3-text-grey">2025</span>
+        <div class="proj-row">
+          <span class="proj-year">2025</span>
+          <div class="proj-info">
+            <a href="#" class="proj-title">HMgit</a>
+            <p class="proj-desc">Homelab version control</p>
           </div>
-          <div class="w3-col m7">
-            <a href="#" class="w3-large">HMgit</a>
-            <p class="w3-small w3-text-grey" style="margin: 4px 0 0 0">
-              Homelab version control
-            </p>
-          </div>
-          <div class="w3-col m3 w3-right-align">
-            <span class="w3-small w3-text-grey">C, &nbsp; Homelab</span>
-          </div>
+          <span class="proj-tech">C, Homelab</span>
         </div>
-
-        <div class="w3-row w3-padding-16 w3-border-bottom">
-          <div class="w3-col m2">
-            <span class="w3-small w3-text-grey">2025</span>
+        <div class="proj-row">
+          <span class="proj-year">2025</span>
+          <div class="proj-info">
+            <a href="#" class="proj-title">huskiemotorsports.com</a>
+            <p class="proj-desc">Organization website</p>
           </div>
-          <div class="w3-col m7">
-            <a href="#" class="w3-large">huskiemotorsports.com</a>
-            <p class="w3-small w3-text-grey" style="margin: 4px 0 0 0">
-              Organization website
-            </p>
-          </div>
-          <div class="w3-col m3 w3-right-align">
-            <span class="w3-small w3-text-grey">Bootstrap, &nbsp; CSS</span>
-          </div>
+          <span class="proj-tech">Bootstrap, CSS</span>
         </div>
-
-        <div class="w3-row w3-padding-16 w3-border-bottom">
-          <div class="w3-col m2">
-            <span class="w3-small w3-text-grey">2024</span>
+        <div class="proj-row">
+          <span class="proj-year">2024</span>
+          <div class="proj-info">
+            <a href="#" class="proj-title">Fennec</a>
+            <p class="proj-desc">Game processor and renderer</p>
           </div>
-          <div class="w3-col m7">
-            <a href="#" class="w3-large">Fennec</a>
-            <p class="w3-small w3-text-grey" style="margin: 4px 0 0 0">
-              Game processor and renderer
-            </p>
-          </div>
-          <div class="w3-col m3 w3-right-align">
-            <span class="w3-small w3-text-grey">PyQt6,&nbsp;Chess</span>
-          </div>
+          <span class="proj-tech">PyQt6, Chess</span>
         </div>
-        <div class="w3-row w3-padding-16 w3-border-bottom">
-          <div class="w3-col m2">
-            <span class="w3-small w3-text-grey">2024</span>
+        <div class="proj-row">
+          <span class="proj-year">2024</span>
+          <div class="proj-info">
+            <a href="#" class="proj-title">Wrench</a>
+            <p class="proj-desc">E-Commerce platform. Car parts.</p>
           </div>
-          <div class="w3-col m7">
-            <a href="#" class="w3-large">Wrench</a>
-            <p class="w3-small w3-text-grey" style="margin: 4px 0 0 0">
-              E-Commerce platform. Car parts.
-            </p>
-          </div>
-          <div class="w3-col m3 w3-right-align">
-            <span class="w3-small w3-text-grey">HTML,&nbsp;Tailwind</span>
-          </div>
+          <span class="proj-tech">HTML, Tailwind</span>
         </div>
       </section>
+      <footer class="site-footer">
+        <a href="https://github.com/cjb543">GitHub</a> &nbsp;·&nbsp;
+        <a href="https://linkedin.com/in/cjb543">LinkedIn</a>
+      </footer>
     </main>
   </body>
 </html>
