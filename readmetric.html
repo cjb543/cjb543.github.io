@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
-    <title>HM - Christopher Benson</title>
+    <title>ReadMetric - Christopher Benson</title>
     <style>
       *, *::before, *::after {
         box-sizing: border-box;
@@ -196,25 +196,44 @@
     </header>
 
     <section>
-      <h2>Huskie Motorsports - <b><a href="https://huskiemotorsports.com/">Link</a></b></h2>
-
+      <h2>ReadMetric</h2>
       <p>
-        As a member of Huskie Motorsports, I was offered the privilege of building an improved website for the team.
-        To fit the team's history of ruthless resourcefulness and work ethic, I opted to go for a basic stack -- Bootstrap and JS. Writing an organization's website using only an HTML framework posed a great challenge, and required me to think on my own for a lot of problems. With no frameworks to save me from my own mistakes, I had to spend real time with each pixel of the site.
+      ReadMetric is a <u>concluded</u> research project that aimed to determine
+        if the quality of a user's README was indicative of how well
+        their repository would perform in terms of popularity. Standard KDD processes were followed in order to develop a scientifically valid result.
       </p>
       <p>
-        However, there are plans to rewrite the website in a modern solution. Typescript, React, and all of the UI frameworks to stack on top are the craze for web development these days. The only reason the website is using such a minimalist stack is because of my own biases and opinions, and it would be unwise to let that get in the way of a better developer experience.
+        Using a variety of statistical analysis models, no tangible correlation was
+        found between the two factors, concluding that README quality does not meaningfully
+        impact project success. Other factors are probably much more important.
       </p>
-
     </section>
 
     <section>
-      <h2>Other Notes</h2>
+      <h2>Scraping</h2>
       <p>
-      There are many small things that go into web development beyond code. With the advent of LLMs in programming spaces, I see web development becoming a design-oriented field much more than a "coding" practice. Web development will <i>probably</i> pivot to a marketing sector rather than stay a software role. I still think it's a lot of fun regardless of pessimistic backend developers and their opinions.
+        Data was scraped from GitHub manually using a combination of GitHub's REST API and GraphQL. GHTorrent databases are outdated for the purposes of our project, and no single official source remains, leaving us no choice but to manually fetch these repos ourselves. GraphQL helped dodge rate limits by providing denser queries.
       </p>
-    <section>
     </section>
+    <section>
+      <h2>Roadblocks</h2>
+      <p>
+        Many compromises were made in the utilization of data in order to get a valid list of repositories. The goal was 5,000 clean repositories, but many things were in the way:
+        <ul>
+            <li>API ordering - GitHub's API automatically ordered repos according to some unknown "relevancy" metric. If we only scrape 5,000 repos, we'd scrape a biased dataset by default. The solution was to partition queries by month and use a low-star-count group as a control group.</li>
+            <li>Influencer Repos - Repos from popular individuals <i>and companies</i> would skew the dataset greatly. Manual effort was made to remove these repos, as they were not sound for analysis.</li>
+            <li>Quantity - GitHub's API does not immediately store every repo ever, hence the value of the now-deceased GHTorrent. Luckily, 5,000 was an acceptable amount of repositories.</li>
+            <li>Absurd READMEs - Some READMEs had odd characteristics--like 200 images of graph renders. It's hard to quantify the quality of a README like that.</li>
+            <li>Absurd fork counts - Forks should count as a success metric, but some projects insist on being forked as a qualifier for its usefulness, making forks a flimsy metric for measuring success unless each repo was manually reviewed. Educational repos could have hundreds of thousands of forks (and some did).</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Result</h2>
+        <p>
+        After extensively tuning our scraper and doing lots of manual filtering, we believe we had a dataset worth using. After applying both basic correlative and machine learning algorithms, we could not find any substantial correlations between any individual README quality and the success of the project.
+        </p>
+    </section>
+
     <footer class="site-footer">
       <a href="https://github.com/cjb543">GitHub</a> &nbsp;·&nbsp;
       <a href="https://linkedin.com/in/cjb543">LinkedIn</a>
