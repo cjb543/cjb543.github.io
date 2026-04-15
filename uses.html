@@ -136,14 +136,24 @@
       ul li {
         display: flex;
         gap: 1.5rem;
-        padding: 0.5rem 0;
+        padding: 0.75rem 0;
         border-top: 1px solid var(--rule);
         font-size: 1rem;
         line-height: 1.5;
+        align-items: baseline;
       }
 
       ul li:last-child {
         border-bottom: 1px solid var(--rule);
+      }
+
+      .item-cat {
+        color: var(--muted);
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        min-width: 6.5rem;
+        flex-shrink: 0;
       }
 
 
@@ -196,8 +206,8 @@
         to know anything else. I have no reason to get rid of it.
       </p>
       <ul>
-        <li><a href="https://vandoren.fr/en/clarinet-ligatures/#optimum">Vandoren Optimum</a> ligature</li>
-        <li><a href="https://www.daddario.com/products/organic-reserve-classic-bb-clarinet-reeds?variant=43126112714817">D'Addario Reserve 3.5</a> reeds</li>
+        <li><span class="item-cat">Ligature</span><a href="https://vandoren.fr/en/clarinet-ligatures/#optimum">Vandoren Optimum</a></li>
+        <li><span class="item-cat">Reeds</span><a href="https://www.daddario.com/products/organic-reserve-classic-bb-clarinet-reeds?variant=43126112714817">D'Addario Reserve 3.5</a></li>
       </ul>
       <p>
         For voice work, recordings, and meetings I use a
@@ -215,10 +225,10 @@
         chair. It has been enough. I have not gone looking for something else.
       </p>
       <ul>
-        <li><a href="https://www.ikea.com/us/en/p/tertial-work-lamp-dark-gray-20355434/">Tertial</a> lamp</li>
-        <li><a href="https://us.focusrite.com/products/scarlett-solo">Scarlett Solo</a> audio interface</li>
-        <li><a href="https://www.imei.info/phonedatabase/kyocera-digno-keitai-4/">A202KC</a> phone</li>
-        <li><a href="https://www.aulastar.com/gaming-keyboard/176.html">Aula F75</a> keyboard</li>
+        <li><span class="item-cat">Lamp</span><a href="https://www.ikea.com/us/en/p/tertial-work-lamp-dark-gray-20355434/">Tertial</a></li>
+        <li><span class="item-cat">Audio</span><a href="https://us.focusrite.com/products/scarlett-solo">Scarlett Solo</a></li>
+        <li><span class="item-cat">Phone</span><a href="https://www.imei.info/phonedatabase/kyocera-digno-keitai-4/">A202KC</a></li>
+        <li><span class="item-cat">Keyboard</span><a href="https://www.aulastar.com/gaming-keyboard/176.html">Aula F75</a></li>
       </ul>
     </section>
     <section>
@@ -229,9 +239,9 @@
         use is just one way to express that pattern.
       </p>
       <ul>
-        <li>Debian / Win. 10</li>
-        <li>i3, zsh, lf, vim, feh ffmpeg, sxiv, t</li>
-        <li>Ghostty, ImageMagick, GIMP, Audacity</li>
+        <li><span class="item-cat">OS</span>Debian / Win. 10</li>
+        <li><span class="item-cat">CLI</span>i3, zsh, lf, vim, feh, ffmpeg, sxiv, t</li>
+        <li><span class="item-cat">Apps</span>Ghostty, ImageMagick, GIMP, Audacity</li>
       </ul>
     </section>
     <section>
@@ -241,9 +251,9 @@
         I keep more than one book going. It helps me stay with it.
       </p>
       <ul>
-        <li>Built to Last — Jim Collins</li>
-        <li>Genesis of Artistic Creativity — Michael Fitzg</li>
-        <li>The Body Keeps the Score — Bessel Van Der Kolk</li>
+        <li><span class="item-cat">Collins</span>Built to Last</li>
+        <li><span class="item-cat">Fitzg.</span>Genesis of Artistic Creativity</li>
+        <li><span class="item-cat">Van Der Kolk</span>The Body Keeps the Score</li>
       </ul>
     </section>
     <footer class="site-footer">
