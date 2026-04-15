@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <title>NCC - Christopher Benson</title>
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ink: #111;
+        --muted: #888;
+        --bg: #faf9f7;
+        --rule: #ddd;
+      }
+
+      html {
+        overflow-y: scroll;
+        background: var(--bg);
+        color: var(--ink);
+      }
+
+      body {
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 1.25rem;
+        line-height: 1.8;
+        max-width: 36rem;
+        margin: 0 auto;
+        padding: 5rem 1.5rem 4rem;
+      }
+
+
+      .site-header {
+        margin-bottom: 4rem;
+      }
+
+      h1 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 3.5rem;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.4rem;
+      }
+
+      .site-subtitle {
+        font-size: 0.85rem;
+        letter-spacing: 0.18em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+      }
+
+
+      nav {
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+        color: var(--muted);
+        text-decoration: none;
+        letter-spacing: 0.04em;
+        padding-bottom: 2px;
+        border-bottom: 1px solid transparent;
+        transition: color 0.2s, border-color 0.2s;
+      }
+
+      nav a:hover {
+        color: var(--ink);
+      }
+
+      nav a.active {
+        color: var(--ink);
+        border-bottom-color: var(--ink);
+      }
+
+
+      section {
+        margin-bottom: 3.5rem;
+      }
+
+      h2 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 1.2rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+
+      .pipeline {
+        list-style: none;
+        margin-top: 1.5rem;
+      }
+
+      .pipeline li {
+        display: flex;
+        gap: 1.5rem;
+        padding: 0.65rem 0;
+        border-top: 1px solid var(--rule);
+        font-size: 1rem;
+        line-height: 1.5;
+        align-items: baseline;
+      }
+
+      .pipeline li:last-child {
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .pipeline-label {
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        width: 7rem;
+        flex-shrink: 0;
+        padding-top: 0.1rem;
+      }
+
+      .pipeline-desc {
+        flex: 1;
+        color: var(--ink);
+      }
+
+      .pipeline-tech {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        text-align: right;
+        flex-shrink: 0;
+        white-space: nowrap;
+        text-transform: uppercase;
+      }
+
+
+      .site-footer {
+        margin-top: 5rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .site-footer a {
+        color: var(--muted);
+        text-decoration: none;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 1px;
+        transition: color 0.2s, border-color 0.2s;
+      }
+
+      .site-footer a:hover {
+        color: var(--ink);
+        border-color: var(--ink);
+      }
+
+      a {
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 1px;
+        transition: border-color 0.2s;
+      }
+
+      a:hover {
+        border-color: var(--ink);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Chris Benson</h1>
+      <p class="site-subtitle">Software Engineer</p>
+      <nav>
+        <a href="/">About</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/uses.html">Uses</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>NCC</h2>
+      <p>
+        NCC is a compiler I wrote from scratch for a compiler design course.
+        It takes source files written in a small custom language and
+        compiles them directly to x86 machine code executed from memory.
+      </p>
+      <p>
+        Written in C, the language supports arithmetic, strings, integer variables,
+        basic I/O, relational and logical expressions, if/else, and while loops.
+      </p>
+    </section>
+
+    <section>
+      <h2>Pipeline</h2>
+      <p>
+        Each source file passes through four stages before anything runs.
+      </p>
+      <ul class="pipeline">
+        <li>
+          <span class="pipeline-label">Buffer</span>
+          <span class="pipeline-desc">
+            The source file is read entirely into memory. The buffer
+            tracks line and column position and supports ungetting characters.
+            Setup for the lexer.
+          </span>
+        </li>
+        <li>
+          <span class="pipeline-label">Lexer</span>
+          <span class="pipeline-desc">
+            The token stream is produced character by character.
+            Handles identifiers, integer and float constants, string literals
+            with escape sequences, operators, block and line comments.
+          </span>
+        </li>
+        <li>
+          <span class="pipeline-label">Parser</span>
+          <span class="pipeline-desc">
+            A recursive descent parser produces an AST.
+            Arithmetic, relational, and logical expressions
+            are handled according to precedence and associativity rules.
+            Statements are parsed into sequences.
+          </span>
+        </li>
+        <li>
+          <span class="pipeline-label">Codegen</span>
+          <span class="pipeline-desc">
+            The AST is walked post-order. x86 machine code is written
+            directly into a byte array using a stack machine model.
+            The finished program is cast to a function pointer and called.
+          </span>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>A Few Details</h2>
+      <p>
+        The stack machine keeps the top of stack 
+        in the accumulator register.
+        Jumps for if/else and while are patched 
+        in after the target addresses are known.
+      </p>
+      <p>
+        Short-circuit evaluation for <em>&</em> and <em>|</em> is implemented
+        with conditional jumps. The
+        result of every relational and logical expression lives in AL as
+        a 0 or 1.
+      </p>
+      <p>
+        Variables are stored at fixed heap addresses tracked in a symbol table.
+        String constants are interned at compile time into a string table
+        that persists through execution.
+      </p>
+    </section>
+    <footer class="site-footer">
+      <a href="https://github.com/cjb543">GitHub</a> &nbsp;·&nbsp;
+      <a href="https://linkedin.com/in/cjb543">LinkedIn</a>
+    </footer>
+  </body>
+</html>
