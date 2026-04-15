@@ -3,53 +3,198 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✏️</text></svg>" />
-    <style>body{font:1em/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#222;max-width:42rem;margin:4rem auto;padding:0 1.25rem;background:#f5f5f5;-webkit-font-smoothing:antialiased}h1,h2,h3{font:400 1em/1.25 Georgia,serif;color:#000;margin:1.6rem 0 .6rem}h1{font-size:3rem;letter-spacing:-.02em}h2{font-size:2rem;text-align:center}h3{font-size:1.2rem}p{margin:1rem 0}a{color:inherit;text-decoration:none;border-bottom:1px solid #ccc;transition:.2s}a:hover{color:#000;border-color:#000}hr{border:0;border-top:2px solid #000;width:50%;margin:2.5rem 0}blockquote{margin:1.5rem 0;padding-left:1rem;border-left:2px solid #000;color:#555;font-style:italic}small{color:#777;font-size:.85em}html{overflow-y:scroll}main{display:flex;flex-direction:column;min-height:calc(100vh - 8rem)}nav{display:flex;border:1px solid #ddd;margin:2rem 0}nav a{padding:8px 16px;border-bottom:none;text-align:center;flex:1}nav a:hover{background:#f0f0f0;border-bottom:none}nav a.active{background:#e8e8e8}.proj-row{display:flex;gap:1rem;padding:16px 0;border-bottom:1px solid #ddd;align-items:baseline}.proj-year{width:4rem;color:#777;font-size:.85em;flex-shrink:0}.proj-info{flex:1}.proj-title{font-size:1.1em}.proj-desc{color:#777;font-size:.85em;margin:4px 0 0}.proj-tech{color:#777;font-size:.85em;text-align:right;flex-shrink:0;white-space:nowrap}.site-header{text-align:center;padding:64px 0 0}.site-subtitle{font-family:Georgia,serif;letter-spacing:.12em;font-size:.85em;color:#555}.site-footer{margin-top:auto;padding:1.5rem 0;border-top:1px solid #ddd;text-align:center;font-size:.85em;color:#777}</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
     <title>Christopher Benson</title>
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ink: #111;
+        --muted: #888;
+        --bg: #faf9f7;
+        --rule: #ddd;
+      }
+
+      html {
+        overflow-y: scroll;
+        background: var(--bg);
+        color: var(--ink);
+      }
+
+      body {
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 1.25rem;
+        line-height: 1.8;
+        max-width: 36rem;
+        margin: 0 auto;
+        padding: 5rem 1.5rem 4rem;
+      }
+
+
+      .site-header {
+        margin-bottom: 4rem;
+      }
+
+      h1 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 3.5rem;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.4rem;
+      }
+
+      .site-subtitle {
+        font-size: 0.85rem;
+        letter-spacing: 0.18em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+      }
+
+
+      nav {
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+        color: var(--muted);
+        text-decoration: none;
+        letter-spacing: 0.04em;
+        padding-bottom: 2px;
+        border-bottom: 1px solid transparent;
+        transition: color 0.2s, border-color 0.2s;
+      }
+
+      nav a:hover {
+        color: var(--ink);
+      }
+
+      nav a.active {
+        color: var(--ink);
+        border-bottom-color: var(--ink);
+      }
+
+
+      section {
+        margin-bottom: 3.5rem;
+      }
+
+      h2 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 1.2rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+
+      .focus-list {
+        list-style: none;
+      }
+
+      .focus-list li {
+        display: flex;
+        gap: 1.5rem;
+        padding: 0.6rem 0;
+        border-top: 1px solid var(--rule);
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+
+      .focus-list li:last-child {
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .focus-label {
+        color: var(--muted);
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        width: 5.5rem;
+        flex-shrink: 0;
+        padding-top: 0.25rem;
+      }
+
+
+      .site-footer {
+        margin-top: 5rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .site-footer a {
+        color: var(--muted);
+        text-decoration: none;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 1px;
+        transition: color 0.2s, border-color 0.2s;
+      }
+
+      .site-footer a:hover {
+        color: var(--ink);
+        border-color: var(--ink);
+      }
+    </style>
   </head>
   <body>
-    <main>
-      <header class="site-header">
-        <h1>Chris Benson</h1>
-        <p class="site-subtitle">SOFTWARE ENGINEER</p>
-        <nav>
-          <a href="/" class="active">About</a>
-          <a href="/portfolio.html">Portfolio</a>
-          <a href="/uses.html">Uses</a>
-        </nav>
-      </header>
-      <section>
-        <h2>About</h2>
-        <p>
-          Software engineer and musician. They don't stay separate. Most of
-          what I build is at that overlap. Constraint systems, generative
-          notation, tools that change how people play.
-        </p>
-        <p>
-          I have played clarinet for over ten years. Saxophone and piano came
-          after. Computer science found me in my second semester of college.
-          It fit.
-        </p>
-      </section>
-      <section>
-        <h2>Current Focus</h2>
-        <div class="proj-row">
-          <span class="proj-year">Building</span>
-          <span class="proj-info">Autopoeia - code execution sonification</span>
-        </div>
-        <div class="proj-row">
-          <span class="proj-year">Studying</span>
-          <span class="proj-info">Compiler Design</span>
-        </div>
-        <div class="proj-row">
-          <span class="proj-year">Practicing</span>
-          <span class="proj-info">Clarinet - Bach, Chromatic Fantasy</span>
-        </div>
-      </section>
-      <footer class="site-footer">
-        <a href="https://github.com/cjb543">GitHub</a> &nbsp;·&nbsp;
-        <a href="https://linkedin.com/in/cjb543">LinkedIn</a>
-      </footer>
-    </main>
+    <header class="site-header">
+      <h1>Chris Benson</h1>
+      <p class="site-subtitle">Software Engineer</p>
+      <nav>
+        <a href="/" class="active">About</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/uses.html">Uses</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        I'm a software engineer working at the intersection of
+        technology, music, and creativity.
+      </p>
+      <p>
+        I'm a woodwind player of 10 years. Clarinet, saxophone, and piano
+        have my heart.
+      </p>
+    </section>
+
+    <section>
+      <h2>Current Focus</h2>
+      <ul class="focus-list">
+        <li>
+          <span class="focus-label">Building</span>
+          <span>Code Execution Sonification</span>
+        </li>
+        <li>
+          <span class="focus-label">Studying</span>
+          <span>Compiler Design</span>
+        </li>
+        <li>
+          <span class="focus-label">Practicing</span>
+          <span>BWV 903</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <a href="https://github.com/cjb543">GitHub</a> &nbsp;·&nbsp;
+      <a href="https://linkedin.com/in/cjb543">LinkedIn</a>
+    </footer>
   </body>
 </html>
