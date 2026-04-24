@@ -8,9 +8,24 @@
     <title>Writings - Christopher Benson</title>
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/style.css" />
-    <style>ul{list-style:none;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}ul li{padding:.35rem 0;font-size:1.1rem;line-height:1.5}</style>
+    <style>
+      .intro{max-width:33rem}
+      .writings{list-style:none;margin:1.5rem 0 0;padding:0}
+      .writings li{border-bottom:1px solid var(--rule)}
+      .entry{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:1.25rem;padding:1.15rem 0;text-decoration:none;color:var(--ink);align-items:start}
+      .entry-meta{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:.2rem;white-space:nowrap}
+      .entry-body{display:flex;flex-direction:column;gap:.35rem}
+      .entry-title{font-size:1.1rem;line-height:1.5}
+      .entry-desc{font-size:.9rem;line-height:1.45;color:var(--muted)}
+      nav a,a,.site-footer a{transition:none}
+      @media (max-width:560px){
+        .entry{grid-template-columns:1fr;gap:.35rem;padding:1rem 0}
+        .entry-meta{padding-top:0}
+      }
+    </style>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header class="site-header">
       <h1>Chris Benson</h1>
       <p class="site-subtitle">Software Engineer</p>
@@ -22,16 +37,35 @@
       </nav>
     </header>
 
-    <section>
-      <ul>
-          <li><a href="/bach.html">Bach and Programming</a></li>
-          <li><a href="/share.html">SHARE</a></li>
+    <section id="main">
+      <p class="intro">
+        A small index of essays and notes.
+      </p>
+      <ul class="writings">
+        <li>
+          <a class="entry" href="/bach.html">
+            <span class="entry-meta">2026</span>
+            <span class="entry-body">
+              <span class="entry-title">Bach and Programming</span>
+              <span class="entry-desc">On innovating inside formal systems.</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="entry" href="/share.html">
+            <span class="entry-meta">2026</span>
+            <span class="entry-body">
+              <span class="entry-title">SHARE</span>
+              <span class="entry-desc">Conference notes from SHARE Orlando.</span>
+            </span>
+          </a>
+        </li>
       </ul>
     </section>
 
     <footer class="site-footer">
-      <a href="https://github.com/cjb543">GitHub</a> &nbsp;·&nbsp;
-      <a href="https://linkedin.com/in/cjb543">LinkedIn</a>
+      <a href="https://github.com/cjb543" aria-label="GitHub profile">GitHub</a> &nbsp;·&nbsp;
+      <a href="https://linkedin.com/in/cjb543" aria-label="LinkedIn profile">LinkedIn</a>
     </footer>
   </body>
 </html>
