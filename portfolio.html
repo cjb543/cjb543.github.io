@@ -8,7 +8,7 @@
     <title>Portfolio - Christopher Benson</title>
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/style.css" />
-    <style>.proj-row{display:flex;gap:1.5rem;padding:.75rem 0;border-top:1px solid var(--rule);align-items:baseline}.proj-row:last-child{border-bottom:1px solid var(--rule)}.proj-year{font-size:.8rem;letter-spacing:.06em;color:var(--muted);width:3rem;flex-shrink:0;padding-top:.1rem}.proj-info{flex:1}.proj-title{font-size:1.1rem}.proj-desc{font-size:.9rem;color:var(--muted);margin-top:2px;font-style:italic}.proj-tech{font-size:.8rem;letter-spacing:.06em;color:var(--muted);text-align:right;flex-shrink:0;white-space:nowrap;text-transform:uppercase}</style>
+    <style>.proj-list{position:relative;padding-left:1.5rem}.proj-list::before{content:'';position:absolute;left:0;top:.9rem;bottom:.9rem;width:1px;background:var(--rule)}.proj-row{display:flex;gap:1.5rem;padding:.5rem 0;align-items:baseline;position:relative}.proj-row::before{content:'';position:absolute;left:-1.5rem;top:50%;transform:translate(-50%,-50%);width:5px;height:5px;border-radius:50%;background:var(--muted)}.proj-year{font-size:.8rem;letter-spacing:.06em;color:var(--muted);width:3rem;flex-shrink:0;padding-top:.1rem}.proj-info{flex:1}.proj-title{font-size:1.1rem}.proj-desc{font-size:.9rem;color:var(--muted);margin-top:2px;font-style:italic}</style>
   </head>
   <body>
     <header class="site-header">
@@ -23,14 +23,13 @@
     </header>
 
     <section>
-      <h2>Portfolio</h2>
       <p>
         Below is a list of my current programming projects. Some for
         school, some for hobby. I keep my professional work private.
       </p>
     </section>
 
-    <section>
+    <section class="proj-list">
 
       <div class="proj-row">
         <span class="proj-year">2026</span>
@@ -38,7 +37,6 @@
           <a href="/typ.html" class="proj-title">typ</a>
           <p class="proj-desc">Typing Trainer</p>
         </div>
-        <span class="proj-tech">C</span>
       </div>
       <div class="proj-row">
         <span class="proj-year">2026</span>
@@ -46,7 +44,6 @@
           <a href="/nhm.html" class="proj-title">Huskie Motorsports Newspage</a>
           <p class="proj-desc">Organization News Page</p>
         </div>
-        <span class="proj-tech">HTML</span>
       </div>
       <div class="proj-row">
         <span class="proj-year">2026</span>
@@ -54,7 +51,6 @@
           <a href="/t.html" class="proj-title">T</a>
           <p class="proj-desc">To-Do App*</p>
         </div>
-        <span class="proj-tech">C</span>
       </div>
       <div class="proj-row">
         <span class="proj-year">2026</span>
@@ -62,7 +58,6 @@
           <a href="/ncc.html" class="proj-title">NCC</a>
           <p class="proj-desc">x86 Compiler</p>
         </div>
-        <span class="proj-tech">C</span>
       </div>
       <div class="proj-row">
         <span class="proj-year">2025</span>
@@ -70,7 +65,6 @@
           <a href="/readmetric.html" class="proj-title">ReadMetric</a>
           <p class="proj-desc">Correlative study between READMEs and project quality</p>
         </div>
-        <span class="proj-tech">Python</span>
       </div>
       <div class="proj-row">
         <span class="proj-year">2025</span>
@@ -78,7 +72,6 @@
           <a href="/hm.html" class="proj-title">Huskie Motorsports Website</a>
           <p class="proj-desc">Organization Website</p>
         </div>
-        <span class="proj-tech">HTML</span>
       </div>
       <div class="proj-row">
         <span class="proj-year">2024</span>
@@ -86,7 +79,6 @@
           <a href="/fennec.html" class="proj-title">Fennec</a>
           <p class="proj-desc">Chess Viewer</p>
         </div>
-        <span class="proj-tech">Python</span>
       </div>
     </section>
 
